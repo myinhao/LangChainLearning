@@ -1,0 +1,10 @@
+# 忽略配置文件
+config.json
+
+# 忽略Python生成的文件
+__pycache__/
+*.pyc
+
+# 忽略IDE生成的文件
+.vscode/
+.idea/
