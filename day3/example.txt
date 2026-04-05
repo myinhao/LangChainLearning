@@ -1,10 +1,29 @@
-输入'退出'或'exit'结束对话
 --------------------------------------------------
-你: 你好，我在深圳上班，请你记住这一点
-LLM: 你好！我已经记住了——你在深圳上班。
+你: 请读取day3.md文件，并总结发给我
+工具调用: [ChatCompletionMessageFunctionToolCall(id='read_file:0', function=Function(arguments='{"file_path": "day3.md"}', name='read_file'), type='function', index=0)]
+工具执行结果 1: # tools
+OpenAI正式发布Function Calling。
+LLM可以调用外部函数，比如读写文件、调用API等。
+https://openai.com/index/function-calling-and-other-api-updates/
 
-如果之后你需要了解深圳的职场信息、通勤建议、当地政策或者基于深圳地理位置的相关帮助，随时告诉我！
+> July 20, 2023 update:
+>
+> We previously communicated to developers that gpt-3.5-turbo-0301, gpt-4-0314 and gpt-4-32k-0314 models were scheduled for sunset on Sept 13, 2023. After reviewing feedback from customers and our community, we are extending support for those models until at least June 13, 2024.
+
 --------------------------------------------------
-你: 好，现在请问我在哪里上班
-LLM: 根据您刚才告诉我的，您在**深圳**上班。
---------------------------------------------------
+LLM: 根据 `day3.md` 文件内容，总结如下：
+
+## 📋 内容总结
+
+**主题：** OpenAI 正式发布 Function Calling 功能
+
+**核心内容：**
+- **Function Calling** 是 OpenAI 推出的一项重要功能，使大语言模型（LLM）能够调用外部函数
+- 模型可以执行如**读写文件**、**调用 API** 等操作
+- 官方公告链接：https://openai.com/index/function-calling-and-other-api-updates/
+
+**附加更新（2023年7月20日）：**
+- OpenAI 延长了对旧版本模型的支持期限
+- `gpt-3.5-turbo-0301`、`gpt-4-0314` 和 `gpt-4-32k-0314` 等模型的支持从原定的 2023年9月13日 延长至 **2024年6月13日**
+
+**重要性：** Function Calling 是 LLM 与外部世界交互的关键技术，大大扩展了 AI 的应用场景。

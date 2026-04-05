@@ -13,7 +13,6 @@ client = OpenAI(
 )
 
 def main():
-    print("欢迎使用LangChain学习助手！")
     print("输入'退出'或'exit'结束对话")
     print("-" * 50)
     
@@ -31,14 +30,13 @@ def main():
             response = client.chat.completions.create(
                 model=config['model_type'],
                 messages=[
-                    {"role": "system", "content": "你是一个有帮助的助手"},
                     {"role": "user", "content": user_input}
                 ]
             )
             
             # 提取并打印回复
             assistant_reply = response.choices[0].message.content
-            print(f"助手: {assistant_reply}")
+            print(f"LLM: {assistant_reply}")
             print("-" * 50)
             
         except Exception as e:

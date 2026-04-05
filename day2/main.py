@@ -44,8 +44,8 @@ def main():
             print(f"LLM: {assistant_reply}")
             print("-" * 50)
             
-            # 将助手回复添加到历史记录
-            main.messages.append({"role": "assistant", "content": assistant_reply})
+            # 将助手回复添加到历史记录，不把LLM的回复直接加入记忆中，因为浪费token。
+            # main.messages.append({"role": "assistant", "content": assistant_reply})
             
             # 滑动窗口：保留最近15条对话记录
             if len(main.messages) > 15:
