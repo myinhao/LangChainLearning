@@ -1,4 +1,4 @@
-from agent初始化 import FileAgent
+from agentBaseInit import FileAgent
 
 if __name__ == "__main__":
     agent = FileAgent()
